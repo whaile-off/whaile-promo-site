@@ -113,6 +113,32 @@ const skilspContent = document.querySelector('.skilsp');
 const aboutpContent = document.querySelectorAll('.aboutp');
 const center = document.querySelector('.center');
 const works = document.querySelectorAll('.worksc');
+const arrows = document.querySelectorAll('.arrows');
+const arrowdown = document.querySelectorAll('.arrowdown');
+const arrowup = document.querySelectorAll('.arrowup');
+const dones = document.querySelectorAll('.done');
+
+if (windowWidth <= 600) {
+    arrows.forEach(arrow => {
+        arrow.style.display = 'none';
+    });
+}
+
+arrowdown.forEach(button => {
+    button.addEventListener('click', function() {
+        dones.forEach(done => {
+	    done.scrollTop += 338;
+	});
+    });
+});
+
+arrowup.forEach(button => {
+    button.addEventListener('click', function() {
+        dones.forEach(done => {
+	    done.scrollTop -= 338;
+	});
+    });
+});
 
 worksButtons.forEach(button => {
     button.addEventListener('click', function() {
