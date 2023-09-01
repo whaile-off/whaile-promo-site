@@ -10,7 +10,6 @@
 
 ::-webkit-scrollbar-thumb {
     background: none;
-    border-radius: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -20,11 +19,9 @@
 * {
     margin: 0;
     padding: 0;
-    
 }
 
 html {
-    background: linear-gradient(313deg, #2A0D32 0%, #010002 100%);
     width: 100vw;
     height: 100vh;
     font-family: 'Noto Serif', serif;
@@ -32,9 +29,32 @@ html {
 
 body {
     overflow: hidden;
-    background: linear-gradient(313deg, #2A0D32 0%, #010002 100%);
+    background-color: #130617;
 }
 
+.blur-1 {
+    width: 400px;
+    height: 400px;
+    right: 10vw;
+    top: 20vh;
+    position: absolute;
+    background: rgb(85,97,245);
+    box-shadow: 500px 500px 500px;
+    border-radius: 9999px;
+    filter: blur(300px);
+}
+
+.blur-2 {
+    width: 100px;
+    height: 100px;
+    left: 10vw;
+    top: 15vh;
+    position: absolute;
+    background: rgb(85,97,245);
+    box-shadow: 300px 300px 300px;
+    border-radius: 9999px;
+    filter: blur(100px);
+}
 .center {
     display: flex;
     align-items: center;
@@ -45,10 +65,11 @@ body {
 }
 
 .image {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     animation: rotate 4s linear infinite;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    background-size: cover;
 }
 
 .wheel {
@@ -75,8 +96,8 @@ body {
     bottom: 50%;
     width: 0;
     transform-origin: 0 100%;
-    padding-bottom: 100px;
-    font-size: 2em;
+    padding-bottom: 170px;
+    font-size: 3em;
 }
 
 .wheel__letter2 {
@@ -85,14 +106,14 @@ body {
     bottom: 50%;
     width: 0;
     transform-origin: 0 100%;
-    padding-bottom: 75px;
-    font-size: 2em;
+    padding-bottom: 125px;
+    font-size: 3em;
 }
 
 .wh {
     position: absolute;
     font-size: 25px;
-    margin-top: 300px;
+    margin-top: 110px;
     background: linear-gradient(90deg, rgba(190,44,0,1) 0%, rgba(255,105,0,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -121,67 +142,20 @@ body {
     cursor: pointer;
 }
 
-.loadhead {
-    margin: 0px 10px 0px 0px;
-    font-size: 40px;
-}
-
-.loading {
-    position: absolute;
+.card .btn {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: flex;
-    align-items: center;
-    color: #fff;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-}
-
-.loadblock {
-    width: 30px;
-    height: 30px;
-    margin: 1px;
-    background: #37D200;
-    animation: moveUpDown 1s infinite alternate ease-in-out, done 2s 2 alternate ease-in-out;
-}
-
-.loadblock:nth-child(9) {
-    animation-delay: 4s;
-}
-
-.loadblock:nth-child(2) {
-    animation-delay: 0.5s;
-}
-
-.loadblock:nth-child(3) {
-    animation-delay: 1s;
-}
-
-.loadblock:nth-child(4) {
-    animation-delay: 1.5s;
-}
-
-.loadblock:nth-child(5) {
-    animation-delay: 2s;
-}
-
-.loadblock:nth-child(6) {
-    animation-delay: 2.5s;
-}
-
-.loadblock:nth-child(7) {
-    animation-delay: 3s;
-}
-
-.loadblock:nth-child(8) {
-    animation-delay: 3.5s;
+    position: absolute;
+    bottom: 1px;
 }
 
 .navbar{
     display: flex;
-    align-items: center;
-    width: 100%;
+    width: 70vw;
     justify-content: space-between;
-    padding: 30px 0px;
+    padding: 30px 15vw;
     position: absolute;
     animation: slideDown 1s ease-out forwards;
 }
@@ -200,7 +174,7 @@ body {
     background-color: transparent;
     border: none;
     width: 90px;
-    height: 40px;
+    height: auto;
 }
 
 .navbar .nav-btn.selected{
@@ -214,13 +188,23 @@ body {
     -webkit-background-clip: text;
     font-weight: 700;
     font-size: 32px;
-    padding: 0px 0px 0px 30px;
+    padding: 0 0 0 30px;
 }
 
 .navbar .item{
     font-size: 13px;
     color: #ccc;
     cursor: pointer;
+}
+
+.navbar .nav-btn {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar .nav-buttons {
+    display: flex;
 }
 
 .navbar .item.selected{
@@ -261,33 +245,19 @@ body {
 
 .footer .footer-links{
     display: flex;
+    align-items: center;
 }
 
-.footer .footer-links .link{
-    margin: 0px 200px;
-    cursor: pointer;
+.arrows {
+    width: 75px;
+    height: 110px;
+    margin: 8% 0;
 }
-
-.footer .footer-links .link h5{
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 40px;
-    color: #fff;
-}
-
-.footer .footer-links .link p{
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    color: #ccc;
-}
-
-.arrows {width: 75px;height: 110px;margin: 8% 0px;}
 
 .arrow {
     width: 40px;
     height: 40px;
-    background: #fff;
+    background: #848385;
     margin: 10px;
     display: flex;
     align-items: center;
@@ -315,6 +285,11 @@ body {
     animation: UnslideAndShrink 2s forwards;
 }
 
+.worksp {
+    width: 100vw;
+    height: 100vh;
+}
+
 .works{
     width: 550px;
     height: 60px;
@@ -325,8 +300,8 @@ body {
 
 .works .line {
     width: 140px;
-    height: 0px;
-    bottom: 0px;
+    height: 0;
+    bottom: 0;
     left: 0;
     position: absolute;
     transform-origin: 0 0;
@@ -338,53 +313,26 @@ body {
     left: 48vh;
     position: absolute;
     color: white;
-    font-size: 44.19px;
-    font-family: Roboto Slab;
+    font-size: 44px;
+    font-family: Roboto Slab, serif;
     font-weight: 500;
     word-wrap: break-word;
 }
 
-.tg {
+.icon {
+    background-size: cover;
     width: 40px;
     height: 40px;
-    transform-origin: 0 0;
-    position: absolute;
-    transform: rotate(90deg);
-    left: 200px;
-    top: 40px;
-}
-
-.vk {
-    width: 40px;
-    height: 40px;
-    transform-origin: 0 0;
-    border-radius: 100px;
-    position: absolute;
-    transform: rotate(90deg);
-    left: 250px;
-    top: 40px;
-}
-
-.git {
-    width: 40px;
-    height: 40px;
-    transform-origin: 0 0;
-    border-radius: 100px;
-    position: absolute;
-    transform: rotate(90deg);
-    left: 300px;
-    top: 40px;
+    display: flex;
+    margin: 0 10px;
 }
 
 .youtube {
-    width: 40px;
+    background-size: cover;
+    width: 55px;
     height: 40px;
-    transform-origin: 0 0;
-    border-radius: 100px;
-    position: absolute;
-    transform: rotate(90deg);
-    left: 365px;
-    top: 40px;
+    display: flex;
+    margin: 0 10px;
 }
 
 .worksc {
@@ -398,15 +346,15 @@ body {
 }
 
 .I {
-    margin: 0% 7%;
+    margin: 0 7%;
 }
 
 .done {
     display: block;
     overflow-x: auto;
-    width: 100%;
+    width: auto;
     height: 85%;
-    margin: 0px 140px;
+    margin: 0 7vw;
 }
 
 .done .card {
@@ -414,12 +362,12 @@ body {
     display: inline-block;
     width: 200px;
     height: 80%;
-    background: #D9D9D9;
-    margin-right: 40px;
-    margin-left: 40px;
-    margin-top: 40px;
-    margin-bottom: 60px;
-    box-shadow: 0px 0px 5px 10px #D9D9D9;
+    background: rgb(255 255 255 / 30%);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    margin: 40px 40px 60px;
 }
 
 .card .head {
@@ -443,9 +391,9 @@ body {
 }
 
 .card .linear {
-    width: 88%;
+    width: 82%;
     height: 3px;
-    background: #313131;
+    background: #151515;
     position: absolute;
     bottom: 60px;
     margin-left: 11px;
@@ -454,19 +402,20 @@ body {
 .card .bot .text {
     color: #fff;
     margin-left: 15px;
-    width: 55%;
+    margin-right: 15px;
+    width: auto;
     font-size: 15px;
 }
 
 .card .bot {
-    position: absolute;
     align-items: center;
     display: flex;
+    cursor: pointer;
     margin: 11px;
     bottom: 0;
     height: 35px;
-    width: 100px;
-    background: #313131;
+    width: 80px;
+    background: #151515;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -474,11 +423,12 @@ body {
 .wfon {
     position: absolute;
     text-align: center;
-    color: #313131;
-    font-size: 185.67px;
+    color: #8b8b8b;
+    font-size: 186px;
     font-weight: 900;
     word-wrap: break-word;
     margin: 70px;
+    margin-left: 18vw;
 }
 
 .aboutp {
@@ -501,7 +451,7 @@ body {
 }
 
 @media screen and (max-width: 1040px) {
-    
+
     .footer{
         flex-direction: column;
     }
@@ -517,24 +467,71 @@ body {
     }
 
     .footer .footer-links .link:first-child{
-    }  
+    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
     ::-webkit-scrollbar {
-      width: 0;
+        width: 0;
+    }
+
+    .blur-1 {
+        width: 100px;
+        height: 70px;
+        right: 10vw;
+        top: 60vh;
+        position: absolute;
+        background: rgb(85,97,245);
+        box-shadow: 500px 500px 500px;
+        border-radius: 9999px;
+        filter: blur(90px);
+    }
+
+    .wh {
+        margin-top: 255px;
+    }
+
+    .image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 50px;
+    }
+
+    .wheel__letter {
+        padding-bottom: 100px;
+        font-size: 2em;
+    }
+
+    .wheel__letter2 {
+        padding-bottom: 75px;
+        font-size: 2em;
+    }
+
+    .navbar {
+        width: 100vw;
+        padding: 30px 0;
+    }
+
+    .navbar .nav-buttons {
+        display: block;
+        text-align: right;
+        margin-right: 15vw;
+    }
+
+    .navbar .nav-btn {
+        font-size: 100%;
+        margin-bottom: 5px;
     }
 
     .wfon {
         position: absolute;
         text-align: center;
-        color: #313131;
+        color: #8b8b8b;
         font-size: 80px;
         font-weight: 900;
         word-wrap: break-word;
-        margin: 70px;
-        margin-top: 260px;
+        margin: 260px 70px 70px;
     }
 
     .done {
@@ -548,33 +545,30 @@ body {
     }
 
     .done::-webkit-scrollbar {
-        width: 0px;
-        height: 0px;
+        width: 0;
+        height: 0;
     }
-    
+
     .done .card {
         position: relative;
         display: inline-block;
         width: 250px;
         height: 80%;
-        background: #D9D9D9;
         margin-right: 40px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        box-shadow: 0px 0px 10px 10px #D9D9D9;
+        margin-top: 0;
+        margin-bottom: 0;
     }
-    
+
     .card .head {
         display: flex;
         justify-content: center;
         position: relative;
         color: black;
         font-size: 25px;
-        font-family: Roboto Slab;
-        font-weight: 800;
+        font-weight: 1000;
         word-wrap: break-word;
     }
-    
+
     .card .desk {
         margin: 11px;
         font-size: 17px;
@@ -596,59 +590,6 @@ body {
         margin-top: 10vh;
     }
 
-    .tg {
-        width: 20px;
-        height: 20px;
-        transform-origin: 0 0;
-        position: absolute;
-        transform: rotate(90deg);
-        left: 140px;
-        top: 32px;
-    }
-    
-    .vk {
-        width: 20px;
-        height: 20px;
-        transform-origin: 0 0;
-        border-radius: 100px;
-        position: absolute;
-        transform: rotate(90deg);
-        left: 170px;
-        top: 32px;
-    }
-    
-    .git {
-        width: 20px;
-        height: 20px;
-        transform-origin: 0 0;
-        border-radius: 100px;
-        position: absolute;
-        transform: rotate(90deg);
-        left: 200px;
-        top: 32px;
-    }
-    
-    .youtube {
-        width: 20px;
-        height: 20px;
-        transform-origin: 0 0;
-        border-radius: 100px;
-        position: absolute;
-        transform: rotate(90deg);
-        left: 235px;
-        top: 32px;
-    }
-
-    .works .line {
-        width: 100px;
-        height: 0px;
-        bottom: 15px;
-        left: 0;
-        position: absolute;
-        transform-origin: 0 0;
-        border: 4px white solid;
-    }
-
     .footer .footer-header{
         font-size: 20px;
         line-height: 30px;
@@ -660,20 +601,6 @@ body {
     .footer .footer-links{
         justify-content: center;
         width: 100%;
-    }
-
-    .footer .footer-links .link{
-        margin-left: 20px;
-    }
-
-    .footer .footer-links .link h5{
-        font-size: 15px;
-        line-height: 35px;
-    }
-
-    .footer .footer-links .link p{
-        font-size: 11px;
-        line-height: 18px;
     }
 }
 

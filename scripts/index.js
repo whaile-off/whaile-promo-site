@@ -76,34 +76,9 @@ function animateBar(bar) {
     }, animationDuration * 1000);
 }
 
-window.onload = function() {
-    setTimeout(function() {
-        document.querySelector('.loading').style.display = 'none';
-        document.querySelector('.main').style.display = 'block';
-    }, 8000);
-};
-
-const socialIconBlocks = document.querySelectorAll('.social-icons');
 const windowWidth = window.innerWidth;
 
-socialIconBlocks.forEach(socialIconBlock => {
-    const icons = socialIconBlock.querySelectorAll('img');
-    const iconWidth = windowWidth <= 600 ? '20px' : '40px';
-    icons.forEach(icon => {
-        icon.setAttribute('width', iconWidth);
-        icon.style.width = iconWidth;
-    });
-});
-
-const imagesI = document.querySelectorAll('.I img');
-if (imagesI.length > 0 && windowWidth <= 600) {
-    imagesI.forEach(image => {
-        image.setAttribute('width', '200px');
-        image.style.width = '200px';
-    });
-}
 const worksButtons = document.querySelectorAll('.worksButton');
-const mainsButtons = document.querySelectorAll('.mainsButton');
 const mainButtons = document.querySelectorAll('.mainButton');
 const skilsButtons = document.querySelectorAll('.skilsButton');
 const centerButton = document.getElementById('center');
@@ -127,88 +102,64 @@ if (windowWidth <= 600) {
 arrowdown.forEach(button => {
     button.addEventListener('click', function() {
         dones.forEach(done => {
-	    done.scrollTop += 338;
-	});
+	        done.scrollTop += 358;
+	    });
     });
 });
 
 arrowup.forEach(button => {
     button.addEventListener('click', function() {
         dones.forEach(done => {
-	    done.scrollTop -= 338;
-	});
+	        done.scrollTop -= 358;
+	    });
     });
 });
 
 worksButtons.forEach(button => {
     button.addEventListener('click', function() {
         mainContent.style.display = 'none';
-	skilspContent.style.display = 'none';
+	    skilspContent.style.display = 'none';
        	workspContent.style.display = 'block';
-    });
-});
-
-mainsButtons.forEach(button => {
-    button.addEventListener('click', function() {
-	center.classList.remove('slide-left', 'slide-undo');
-        workspContent.style.display = 'none';
-	skilspContent.style.display = 'none';
-	aboutpContent.forEach(section => {
-	    section.style.display = 'none';
-	});
-       	mainContent.style.display = 'block';
     });
 });
 
 mainButtons.forEach(button => {
     button.addEventListener('click', function() {
-	center.classList.remove('slide-left', 'slide-undo');
+	    center.classList.remove('slide-left', 'slide-undo');
         workspContent.style.display = 'none';
-	skilspContent.style.display = 'none';
-	aboutpContent.forEach(section => {
-	    section.style.display = 'none';
-	});
-	center.classList.remove('slide-right', 'slide');
+	    skilspContent.style.display = 'none';
+	    aboutpContent.forEach(section => {
+	        section.style.display = 'none';
+	    });
+	    center.classList.remove('slide-right', 'slide');
         if (windowWidth <= 600) {
-	    center.classList.add('slide-undo');
+	        center.classList.add('slide-undo');
         } else {
-	    center.classList.add('slide-left');
+	        center.classList.add('slide-left');
         }
+        mainContent.style.display = 'block';
     });
 });
 
 skilsButtons.forEach(button => {
     button.addEventListener('click', function() {
-	center.classList.remove('slide-left', 'slide-undo');
-	works.forEach(section => {
-	    section.classList.remove('slide-undo', 'slide-left');
-	});
-	mainContent.style.display = 'none';
+        mainContent.style.display = 'none';
         workspContent.style.display = 'none';
-	if (windowWidth <= 600) {
-	    works.forEach(section => {
-	       section.classList.add('slide-undo');
-	    });
-        } else {
-	    works.forEach(section => {
-	       section.classList.add('slide-left');
-	    });
-        }
-	skilspContent.style.display = 'block';
+        skilspContent.style.display = 'block';
     });
 });
 
 centerButton.addEventListener('click', function() {
     center.classList.remove('slide-left', 'slide-undo');
     if (windowWidth <= 600) {
-	center.classList.add('slide');
-    	aboutpContent.forEach(section => {
+	    center.classList.add('slide');
+        aboutpContent.forEach(section => {
             setTimeout(function() {
                 section.style.display = 'block';
             }, 1000);
         });
     } else {
-	center.classList.add('slide-right');
+	    center.classList.add('slide-right');
         aboutpContent.forEach(section => {
             setTimeout(function() {
                 section.style.display = 'block';
