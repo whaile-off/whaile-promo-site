@@ -77,21 +77,54 @@ function animateBar(bar) {
 }
 
 const windowWidth = window.innerWidth;
-
+const engC = document.querySelector('.eng');
+const ruC = document.querySelector('.ru');
 const worksButtons = document.querySelectorAll('.worksButton');
 const mainButtons = document.querySelectorAll('.mainButton');
 const skilsButtons = document.querySelectorAll('.skilsButton');
-const centerButton = document.getElementById('center');
-const mainContent = document.querySelector('.main');
-const workspContent = document.querySelector('.worksp');
-const skilspContent = document.querySelector('.skilsp');
+const centerButton = document.querySelectorAll('.centerbtn');
+const mainContent = document.querySelectorAll('.main');
+const workspContent = document.querySelectorAll('.worksp');
+const skilspContent = document.querySelectorAll('.skilsp');
 const aboutpContent = document.querySelectorAll('.aboutp');
-const center = document.querySelector('.center');
-const works = document.querySelectorAll('.worksc');
+const center = document.querySelectorAll('.center');
 const arrows = document.querySelectorAll('.arrows');
 const arrowdown = document.querySelectorAll('.arrowdown');
 const arrowup = document.querySelectorAll('.arrowup');
 const dones = document.querySelectorAll('.done');
+const languageOptions = document.querySelectorAll('.language-option input[type=radio]');
+const language1 = document.querySelectorAll('.language-toggle .item-1');
+const language2 = document.querySelectorAll('.language-toggle .item-2');
+
+let eng = true;
+
+languageOptions.forEach(option => {
+    option.addEventListener('change', () => {
+        const selectedLanguage = document.querySelector('.language-option input[type=radio]:checked').value;
+        if (eng) {
+            eng = false
+            engC.style.display = 'none';
+            language2.forEach(section => {
+                section.style.background = 'none';
+            });
+            language1.forEach(section => {
+                section.style.background = '#201842';
+            });
+            ruC.style.display = 'block';
+        } else {
+            eng = true
+            ruC.style.display = 'none';
+            language1.forEach(section => {
+                section.style.background = 'none';
+            });
+            language2.forEach(section => {
+                section.style.background = '#201842';
+            });
+            engC.style.display = 'block';
+        }
+    });
+});
+
 
 if (windowWidth <= 600) {
     arrows.forEach(arrow => {
@@ -117,53 +150,87 @@ arrowup.forEach(button => {
 
 worksButtons.forEach(button => {
     button.addEventListener('click', function() {
-        mainContent.style.display = 'none';
-	    skilspContent.style.display = 'none';
-       	workspContent.style.display = 'block';
+        mainContent.forEach(section => {
+            section.style.display = 'none';
+        });
+        skilspContent.forEach(section => {
+            section.style.display = 'none';
+        });
+        workspContent.forEach(section => {
+            section.style.display = 'block';
+        });
     });
 });
 
 mainButtons.forEach(button => {
     button.addEventListener('click', function() {
-	    center.classList.remove('slide-left', 'slide-undo');
-        workspContent.style.display = 'none';
-	    skilspContent.style.display = 'none';
+        center.forEach(section => {
+            section.classList.remove('slide-left', 'slide-undo');
+        });
+        skilspContent.forEach(section => {
+            section.style.display = 'none';
+        });
+        workspContent.forEach(section => {
+            section.style.display = 'none';
+        });
 	    aboutpContent.forEach(section => {
 	        section.style.display = 'none';
 	    });
-	    center.classList.remove('slide-right', 'slide');
+        center.forEach(section => {
+            section.classList.remove('slide-right', 'slide');
+        });
         if (windowWidth <= 600) {
-	        center.classList.add('slide-undo');
+            center.forEach(section => {
+                section.classList.add('slide-undo');
+            });
         } else {
-	        center.classList.add('slide-left');
+            center.forEach(section => {
+                section.classList.add('slide-left');
+            });
         }
-        mainContent.style.display = 'block';
+        mainContent.forEach(section => {
+            section.style.display = 'block';
+        });
     });
 });
 
 skilsButtons.forEach(button => {
     button.addEventListener('click', function() {
-        mainContent.style.display = 'none';
-        workspContent.style.display = 'none';
-        skilspContent.style.display = 'block';
+        mainContent.forEach(section => {
+            section.style.display = 'none';
+        });
+        workspContent.forEach(section => {
+            section.style.display = 'none';
+        });
+        skilspContent.forEach(section => {
+            section.style.display = 'block';
+        });
     });
 });
 
-centerButton.addEventListener('click', function() {
-    center.classList.remove('slide-left', 'slide-undo');
-    if (windowWidth <= 600) {
-	    center.classList.add('slide');
-        aboutpContent.forEach(section => {
-            setTimeout(function() {
-                section.style.display = 'block';
-            }, 1000);
+centerButton.forEach(section => {
+    section.addEventListener('click', function() {
+        center.forEach(section => {
+            section.classList.remove('slide-left', 'slide-undo');
         });
-    } else {
-	    center.classList.add('slide-right');
-        aboutpContent.forEach(section => {
-            setTimeout(function() {
-                section.style.display = 'block';
-            }, 1000);
-        });
-    }
+        if (windowWidth <= 600) {
+            center.forEach(section => {
+                section.classList.add('slide');
+            });
+            aboutpContent.forEach(section => {
+                setTimeout(function() {
+                    section.style.display = 'block';
+                }, 1000);
+            });
+        } else {
+            center.forEach(section => {
+                section.classList.add('slide-right');
+            });
+            aboutpContent.forEach(section => {
+                setTimeout(function() {
+                    section.style.display = 'block';
+                }, 1000);
+            });
+        }
+    });
 });

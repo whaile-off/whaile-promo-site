@@ -55,6 +55,53 @@ body {
     border-radius: 9999px;
     filter: blur(100px);
 }
+
+.language-toggle {
+    display: inline-block;
+    overflow: hidden;
+    width: 150px;
+}
+
+.language-option {
+    float: left;
+    display: inline-block;
+}
+
+.language-option input[type=radio] {
+    display: none;
+}
+
+.language-option label {
+    display: inline-block;
+    padding: 0px 15px;
+    line-height: 34px;
+    border: 1px solid #999;
+    border-right: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.language-toggle .item-1 label {
+    border-radius: 6px 0 0 6px;
+}
+
+.language-toggle .item-2 label {
+    border-radius: 0 6px 6px 0;
+    border-right: 1px solid #999;
+}
+
+.language-toggle .item-2 {
+    background: #201842;
+}
+
+.language-toggle .item-1 input[type=radio]:checked + label {
+    background: #201842;
+}
+
+.language-toggle .item-2 input[type=radio]:checked + label {
+    background: #201842;
+}
+
 .center {
     display: flex;
     align-items: center;
@@ -203,6 +250,13 @@ body {
     font-size: 20px;
 }
 
+.navbar .nav-btn-lang {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 20px;
+    width: 150px;
+}
+
 .navbar .nav-buttons {
     display: flex;
 }
@@ -270,19 +324,19 @@ body {
 }
 
 .slide-right {
-    animation: slideRight 2s forwards;
+    animation: slideRight 1s forwards;
 }
 
 .slide-left {
-    animation: slideLeft 2s forwards;
+    animation: slideLeft 1s forwards;
 }
 
 .slide {
-    animation: slideAndShrink 2s forwards;
+    animation: slideAndShrink 1s forwards;
 }
 
 .slide-undo {
-    animation: UnslideAndShrink 2s forwards;
+    animation: UnslideAndShrink 1s forwards;
 }
 
 .worksp {
@@ -397,6 +451,7 @@ body {
     position: absolute;
     bottom: 60px;
     margin-left: 11px;
+    margin-bottom: 15px;
 }
 
 .card .bot .text {
@@ -476,6 +531,13 @@ body {
         width: 0;
     }
 
+    .navbar .nav-btn-lang {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 20px;
+        width: 100px;
+    }
+
     .blur-1 {
         width: 100px;
         height: 70px;
@@ -522,6 +584,7 @@ body {
     .navbar .nav-btn {
         font-size: 100%;
         margin-bottom: 5px;
+        margin-left: 30%;
     }
 
     .wfon {
@@ -663,13 +726,13 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(40% - 120px));
+        transform: translateX(calc(25% - 120px));
     }
 }
 
 @keyframes slideLeft {
     0% {
-        transform: translateX(calc(40% - 120px));
+        transform: translateX(calc(25% - 120px));
     }
     100% {
         transform: translateX(0);
