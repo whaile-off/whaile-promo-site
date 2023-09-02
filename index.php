@@ -318,8 +318,10 @@ HTML;
                             SQL<br>
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Slide down?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Slide down?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -330,8 +332,10 @@ HTML;
                             Optimizing website performance for various browsers and devices.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Slide down?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Slide down?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -342,8 +346,10 @@ HTML;
                             Working with databases, storing and processing data on the server.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Slide down?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Slide down?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -354,8 +360,10 @@ HTML;
                             Integrating with various third-party services and APIs.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Slide down?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Slide down?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -366,8 +374,10 @@ HTML;
                             Providing access to your application's functionality through APIs.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Slide down?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Slide down?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -377,8 +387,10 @@ HTML;
                             I strive to create visually appealing and functional designs that highlight the uniqueness of each project.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Slide down?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Slide down?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -388,8 +400,10 @@ HTML;
                             I specialize in creating content that captures the reader's attention and maintains their interest.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Slide down?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Slide down?</div>
+                            </div>
                         </div>
                     </div>
 
@@ -400,8 +414,10 @@ HTML;
                             My expertise includes setting up, maintaining, and optimizing VPS/VDS to ensure stable and secure operation of server infrastructure.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Slide down?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Slide down?</div>
+                            </div>
                         </div>
                     </div>
 
@@ -412,8 +428,10 @@ HTML;
                             I handle the setup of hosting environments, ensuring reliable and secure operation of websites.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Slide down?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Slide down?</div>
+                            </div>
                         </div>
                     </div>
 
@@ -667,8 +685,10 @@ HTML;
                             SQL<br>
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Листать вниз?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Листать вниз?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -679,8 +699,10 @@ HTML;
                             Оптимизация производительности веб-сайта для различных браузеров и устройств.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Листать вниз?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Листать вниз?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -691,8 +713,10 @@ HTML;
                             Работа с базами данных, хранение и обработка данных на сервере.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Листать вниз?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Листать вниз?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -703,8 +727,10 @@ HTML;
                             Интеграция с различными сторонними сервисами и API.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Листать вниз?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Листать вниз?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -715,8 +741,10 @@ HTML;
                             Предоставление доступа к функционалу вашего приложения через API.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Листать вниз?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Листать вниз?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -726,8 +754,10 @@ HTML;
                             Я стремлюсь создавать визуально привлекательные и функциональные дизайны, выделяя уникальность каждого проекта.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Листать вниз?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Листать вниз?</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -737,8 +767,10 @@ HTML;
                             Я специализируюсь на создании контента, который привлекает внимание читателя и поддерживает его интерес.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Листать вниз?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Листать вниз?</div>
+                            </div>
                         </div>
                     </div>
 
@@ -749,8 +781,10 @@ HTML;
                             Моя экспертиза включает в себя настройку, обслуживание и оптимизацию VPS/VDS для обеспечения стабильной и безопасной работы серверной инфраструктуры.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Листать вниз?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Листать вниз?</div>
+                            </div>
                         </div>
                     </div>
 
@@ -761,8 +795,10 @@ HTML;
                             Я занимаюсь настройкой хостинговых сред, обеспечивая надежную и безопасную работу веб-сайтов.
                         </div>
                         <div class="linear"></div>
-                        <div class="bot" style="width: 130px;white-space: pre;">
-                            <div class="text">Листать вниз?</div>
+                        <div class="btn">
+                            <div class="bot" style="width: 130px;white-space: pre;">
+                                <div class="text">Листать вниз?</div>
+                            </div>
                         </div>
                     </div>
 
