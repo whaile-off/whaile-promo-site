@@ -160,8 +160,8 @@ HTML;
 
             <div class="aboutp" style="display: none;">
                 <div class="worksc">
-                    <div class="done" style="justify-content: center; overflow: hidden;">
-                        <div class="card" style="width: 55%;">
+                    <div class="done margin" style="overflow: hidden;">
+                        <div class="card" style="width: 80%;">
                             <div class="head">I am a Full-Stack developer</div>
                             <div class="desk" style="width: 97%;">I specialize in creating websites, programs, scripts, bots and other programs.<br>
                                 My skills cover a wide range of programming languages, including HTML, Java, sql, Python, CSS, PHP and JavaScript.</div>
@@ -464,7 +464,7 @@ HTML;
         <div class="main">
 
             <div class="aboutp" style="display: none;">
-                <div class="wfon">ABOUT</div>
+                <div class="wfon">Я</div>
             </div>
 
             <div class="center">
@@ -527,10 +527,10 @@ HTML;
 
             <div class="aboutp" style="display: none;">
                 <div class="worksc">
-                    <div class="done" style="justify-content: center; overflow: hidden;">
-                        <div class="card" style="width: 55%;">
+                    <div class="done margin" style="overflow: hidden;">
+                        <div class="card" style="width: 80%;">
                             <div class="head">Я Full-Stack разработчик</div>
-                            <div class="desk" style="width: 97%;">Я специализируюсь на создании веб-сайтов, программ, скриптов, ботов и других приложений.<br>
+                            <div class="desk" style="width: 97%;">Я специализируюсь на создании веб-сайтов, программ, скриптов, ботов и других приложений.
                                 Мои навыки охватывают широкий спектр языков программирования, включая HTML, Java, SQL, Python, CSS, PHP и JavaScript.</div>
                             <div class="linear"></div>
                             <a href="https://github.com/whaile-off" target="_blank" style="text-decoration: none;">

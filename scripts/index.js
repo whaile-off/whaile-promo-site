@@ -1,8 +1,8 @@
 const rotateBetweenWords = (value) => {
     const words = document.querySelectorAll('.wheel__word')
-    
+
     let deg = -60
-    
+
     for (let word of words) {
         word.style.transform = `rotate(${ deg }deg)`
         deg += value
@@ -11,9 +11,9 @@ const rotateBetweenWords = (value) => {
 
 const rotateBetweenLetters = (value) => {
     const letters = document.querySelectorAll('.wheel__letter')
-    
+
     let deg = 0
-    
+
     for (let letter of letters) {
         letter.style.transform = `rotate(${ deg }deg)`
         deg += value
@@ -22,9 +22,9 @@ const rotateBetweenLetters = (value) => {
 
 const rotateBetweenLetters2 = (value) => {
     const letters = document.querySelectorAll('.wheel__letter2')
-    
+
     let deg = 0
-    
+
     for (let letter of letters) {
         letter.style.transform = `rotate(${ deg }deg)`
         deg += value
@@ -95,12 +95,12 @@ const dones = document.querySelectorAll('.done');
 const languageOptions = document.querySelectorAll('.language-option input[type=radio]');
 const language1 = document.querySelectorAll('.language-toggle .item-1');
 const language2 = document.querySelectorAll('.language-toggle .item-2');
-
+const ma = document.querySelectorAll('.margin');
 let eng = true;
+let cent = true;
 
 languageOptions.forEach(option => {
     option.addEventListener('change', () => {
-        const selectedLanguage = document.querySelector('.language-option input[type=radio]:checked').value;
         if (eng) {
             eng = false
             engC.style.display = 'none';
@@ -129,6 +129,10 @@ languageOptions.forEach(option => {
 if (windowWidth <= 600) {
     arrows.forEach(arrow => {
         arrow.style.display = 'none';
+    });
+} else {
+    ma.forEach(margin => {
+        margin.style.margin = '0';
     });
 }
 
@@ -210,26 +214,60 @@ skilsButtons.forEach(button => {
 
 centerButton.forEach(section => {
     section.addEventListener('click', function() {
-        center.forEach(section => {
-            section.classList.remove('slide-left', 'slide-undo');
-        });
-        if (windowWidth <= 600) {
+        if (cent) {
+            cent = false;
+
             center.forEach(section => {
-                section.classList.add('slide');
+                section.classList.remove('slide-left', 'slide-undo');
             });
-            aboutpContent.forEach(section => {
-                setTimeout(function() {
-                    section.style.display = 'block';
-                }, 1000);
-            });
+            if (windowWidth <= 600) {
+                center.forEach(section => {
+                    section.classList.add('slide');
+                });
+                aboutpContent.forEach(section => {
+                    setTimeout(function() {
+                        section.style.display = 'block';
+                    }, 1000);
+                });
+            } else {
+                center.forEach(section => {
+                    section.classList.add('slide-right');
+                });
+                aboutpContent.forEach(section => {
+                    setTimeout(function() {
+                        section.style.display = 'block';
+                    }, 1000);
+                });
+            }
         } else {
+            cent = true;
+
             center.forEach(section => {
-                section.classList.add('slide-right');
+                section.classList.remove('slide-left', 'slide-undo');
+            });
+            skilspContent.forEach(section => {
+                section.style.display = 'none';
+            });
+            workspContent.forEach(section => {
+                section.style.display = 'none';
             });
             aboutpContent.forEach(section => {
-                setTimeout(function() {
-                    section.style.display = 'block';
-                }, 1000);
+                section.style.display = 'none';
+            });
+            center.forEach(section => {
+                section.classList.remove('slide-right', 'slide');
+            });
+            if (windowWidth <= 600) {
+                center.forEach(section => {
+                    section.classList.add('slide-undo');
+                });
+            } else {
+                center.forEach(section => {
+                    section.classList.add('slide-left');
+                });
+            }
+            mainContent.forEach(section => {
+                section.style.display = 'block';
             });
         }
     });

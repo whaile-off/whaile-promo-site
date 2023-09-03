@@ -324,19 +324,19 @@ body {
 }
 
 .slide-right {
-    animation: slideRight 1s forwards;
+    animation: slideRight 2s forwards;
 }
 
 .slide-left {
-    animation: slideLeft 1s forwards;
+    animation: slideLeft 2s forwards;
 }
 
 .slide {
-    animation: slideAndShrink 1s forwards;
+    animation: slideAndShrink 2s forwards;
 }
 
 .slide-undo {
-    animation: UnslideAndShrink 1s forwards;
+    animation: UnslideAndShrink 2s forwards;
 }
 
 .worksp {
@@ -391,11 +391,10 @@ body {
 
 .worksc {
     position: absolute;
-    width: 80vw;
+    width: 80%;
     height: 350px;
     justify-content: right;
     display: flex;
-    right: -120px;
     margin: 17vw;
 }
 
@@ -487,8 +486,8 @@ body {
 }
 
 .aboutp {
-    width: 100vw;
-    height: 100vh;
+    width: 50vw;
+    height: 50vh;
     position: absolute;
     top: 0;
 }
@@ -503,6 +502,10 @@ body {
     height: 200px;
     justify-content: center;
     align-items: center;
+}
+
+.centerbtn {
+    z-index: 10000;
 }
 
 @media screen and (max-width: 1040px) {
@@ -529,6 +532,13 @@ body {
 
     ::-webkit-scrollbar {
         width: 0;
+    }
+
+    .aboutp {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
     }
 
     .navbar .nav-btn-lang {
