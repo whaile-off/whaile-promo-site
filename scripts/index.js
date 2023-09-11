@@ -1,81 +1,14 @@
-const rotateBetweenWords = (value) => {
-    const words = document.querySelectorAll('.wheel__word')
+const ROTATE_DEG = 12;
+const ROTATE_DEG2 = 12;
+const WORDS_CLASS = '.wheel__word';
+const LETTERS_CLASS = '.wheel__letter';
+const LETTERS2_CLASS = '.wheel__letter2';
 
-    let deg = -60
-
-    for (let word of words) {
-        word.style.transform = `rotate(${ deg }deg)`
-        deg += value
-    }
-}
-
-const rotateBetweenLetters = (value) => {
-    const letters = document.querySelectorAll('.wheel__letter')
-
-    let deg = 0
-
-    for (let letter of letters) {
-        letter.style.transform = `rotate(${ deg }deg)`
-        deg += value
-    }
-}
-
-const rotateBetweenLetters2 = (value) => {
-    const letters = document.querySelectorAll('.wheel__letter2')
-
-    let deg = 0
-
-    for (let letter of letters) {
-        letter.style.transform = `rotate(${ deg }deg)`
-        deg += value
-    }
-}
-
-rotateBetweenWords(50)
-rotateBetweenLetters(12)
-rotateBetweenLetters2(12)
-
+const words = document.querySelectorAll(WORDS_CLASS);
+const letters = document.querySelectorAll(LETTERS_CLASS);
+const letters2 = document.querySelectorAll(LETTERS2_CLASS);
 const audio = document.getElementById('audio');
 const bars = document.querySelectorAll('.bar');
-let animationPaused = true;
-
-bars.forEach(bar => {
-    bar.addEventListener('click', () => {
-        if (audio.paused) {
-            audio.play();
-            animationPaused = false;
-            for (let i = 0; i < bars.length; i++) {
-                animateBar(bars[i]);
-            }
-        } else {
-            audio.pause();
-            animationPaused = true;
-            for (let i = 0; i < bars.length; i++) {
-                bars[i].style.animationPlayState = 'paused';
-            }
-        }
-    });
-});
-
-function animateBar(bar) {
-    if (animationPaused) {
-        return;
-    }
-
-    const randomScale = Math.random() * 2 + 1;
-    const animationDuration = Math.random() * 0.5 + 0.5;
-
-    bar.style.animation = `scaleUpDown ${animationDuration}s infinite alternate`;
-
-    setTimeout(() => {
-        bar.style.transform = `scaleY(${randomScale})`;
-        setTimeout(() => {
-            bar.style.transform = 'scaleY(1)';
-            animateBar(bar);
-        }, animationDuration * 1000);
-    }, animationDuration * 1000);
-}
-
 const windowWidth = window.innerWidth;
 const engC = document.querySelector('.eng');
 const ruC = document.querySelector('.ru');
@@ -98,11 +31,88 @@ const language2 = document.querySelectorAll('.language-toggle .item-2');
 const ma = document.querySelectorAll('.margin');
 let eng = true;
 let cent = true;
+let animationPaused = true;
+
+function rotateElements(elements, value) {
+    let deg = 0;
+    for (let element of elements) {
+        element.style.transform = `rotate(${deg}deg)`;
+        deg += value;
+    }
+}
+
+rotateElements(words, 50);
+rotateElements(letters, ROTATE_DEG);
+rotateElements(letters2, ROTATE_DEG2);
+
+function toggleSections() {
+    center.forEach(section => {
+        section.classList.remove('slide-left', 'slide-undo');
+    });
+    skilspContent.forEach(section => {
+        section.style.display = 'none';
+    });
+    workspContent.forEach(section => {
+        section.style.display = 'none';
+    });
+    aboutpContent.forEach(section => {
+        section.style.display = 'none';
+    });
+    center.forEach(section => {
+        section.classList.remove('slide-right', 'slide');
+    });
+    if (windowWidth <= 600) {
+        center.forEach(section => {
+            section.classList.add('slide-undo');
+        });
+    } else {
+        center.forEach(section => {
+            section.classList.add('slide-left');
+        });
+    }
+    mainContent.forEach(section => {
+        section.style.display = 'block';
+    });
+}
+function animateBar(bar) {
+    if (animationPaused) {
+        return;
+    }
+
+    const randomScale = Math.random() * 2 + 1;
+    const animationDuration = Math.random() * 0.5 + 0.5;
+
+    bar.style.animation = `scaleUpDown ${animationDuration}s infinite alternate`;
+
+    setTimeout(() => {
+        bar.style.transform = `scaleY(${randomScale})`;
+        setTimeout(() => {
+            bar.style.transform = 'scaleY(1)';
+            animateBar(bar);
+        }, animationDuration * 1000);
+    }, animationDuration * 1000);
+}
+
+bars.forEach(bar => {
+    bar.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            animationPaused = false;
+            bars.forEach(animateBar);
+        } else {
+            audio.pause();
+            animationPaused = true;
+            bars.forEach(bar => {
+                bar.style.animationPlayState = 'paused';
+            });
+        }
+    });
+});
 
 languageOptions.forEach(option => {
     option.addEventListener('change', () => {
         if (eng) {
-            eng = false
+            eng = false;
             engC.style.display = 'none';
             language2.forEach(section => {
                 section.style.background = 'none';
@@ -112,7 +122,7 @@ languageOptions.forEach(option => {
             });
             ruC.style.display = 'block';
         } else {
-            eng = true
+            eng = true;
             ruC.style.display = 'none';
             language1.forEach(section => {
                 section.style.background = 'none';
@@ -124,7 +134,6 @@ languageOptions.forEach(option => {
         }
     });
 });
-
 
 if (windowWidth <= 600) {
     arrows.forEach(arrow => {
@@ -139,16 +148,16 @@ if (windowWidth <= 600) {
 arrowdown.forEach(button => {
     button.addEventListener('click', function() {
         dones.forEach(done => {
-	        done.scrollTop += 358;
-	    });
+            done.scrollTop += 358;
+        });
     });
 });
 
 arrowup.forEach(button => {
     button.addEventListener('click', function() {
         dones.forEach(done => {
-	        done.scrollTop -= 358;
-	    });
+            done.scrollTop -= 358;
+        });
     });
 });
 
@@ -161,38 +170,6 @@ worksButtons.forEach(button => {
             section.style.display = 'none';
         });
         workspContent.forEach(section => {
-            section.style.display = 'block';
-        });
-    });
-});
-
-mainButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        center.forEach(section => {
-            section.classList.remove('slide-left', 'slide-undo');
-        });
-        skilspContent.forEach(section => {
-            section.style.display = 'none';
-        });
-        workspContent.forEach(section => {
-            section.style.display = 'none';
-        });
-	    aboutpContent.forEach(section => {
-	        section.style.display = 'none';
-	    });
-        center.forEach(section => {
-            section.classList.remove('slide-right', 'slide');
-        });
-        if (windowWidth <= 600) {
-            center.forEach(section => {
-                section.classList.add('slide-undo');
-            });
-        } else {
-            center.forEach(section => {
-                section.classList.add('slide-left');
-            });
-        }
-        mainContent.forEach(section => {
             section.style.display = 'block';
         });
     });
@@ -212,63 +189,28 @@ skilsButtons.forEach(button => {
     });
 });
 
+mainButtons.forEach(button => {
+    button.addEventListener('click', toggleSections);
+});
+
 centerButton.forEach(section => {
     section.addEventListener('click', function() {
         if (cent) {
             cent = false;
-
             center.forEach(section => {
-                section.classList.remove('slide-left', 'slide-undo');
+                section.classList.remove('slide-left');
             });
-            if (windowWidth <= 600) {
-                center.forEach(section => {
-                    section.classList.add('slide');
-                });
-                aboutpContent.forEach(section => {
-                    setTimeout(function() {
-                        section.style.display = 'block';
-                    }, 1000);
-                });
-            } else {
-                center.forEach(section => {
-                    section.classList.add('slide-right');
-                });
-                aboutpContent.forEach(section => {
-                    setTimeout(function() {
-                        section.style.display = 'block';
-                    }, 1000);
-                });
-            }
-        } else {
-            cent = true;
-
             center.forEach(section => {
-                section.classList.remove('slide-left', 'slide-undo');
-            });
-            skilspContent.forEach(section => {
-                section.style.display = 'none';
-            });
-            workspContent.forEach(section => {
-                section.style.display = 'none';
+                section.classList.add('slide-right');
             });
             aboutpContent.forEach(section => {
-                section.style.display = 'none';
+                setTimeout(function() {
+                    section.style.display = 'block';
+                }, 1000);
             });
-            center.forEach(section => {
-                section.classList.remove('slide-right', 'slide');
-            });
-            if (windowWidth <= 600) {
-                center.forEach(section => {
-                    section.classList.add('slide-undo');
-                });
-            } else {
-                center.forEach(section => {
-                    section.classList.add('slide-left');
-                });
-            }
-            mainContent.forEach(section => {
-                section.style.display = 'block';
-            });
+        } else {
+            cent = true;
+            toggleSections();
         }
     });
 });
