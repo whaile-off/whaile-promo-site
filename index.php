@@ -1,19 +1,21 @@
 <?php
 $navbareng = <<<HTML
 <div class="navbar" style="position: absolute;top: 0;">
-    <a class="logo"><img src="https://whaile.ru/img/_whaile_.png" width="40px" alt="_whaile_"></a>
-
-    <audio id="audio" controls style="display: none;">
-        <source src="m.mp3" type="audio/mpeg">
-    </audio>
-
-    <div class="audio-visualizer">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <div style="display: flex">
+        <a class="logo"><img src="https://whaile.ru/img/_whaile_.png" width="40px" alt="_whaile_"></a>
+    
+        <audio id="audio" controls style="display: none;">
+            <source src="m.mp3" type="audio/mpeg">
+        </audio>
+    
+        <div class="audio-visualizer">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </div>
 
     <div class="nav-buttons" id="navMenu">
@@ -31,26 +33,28 @@ $navbareng = <<<HTML
         </div>
         <div class="nav-btn mainButton">Home</div>
         <div class="nav-btn worksButton">Works</div>
-        <div class="nav-btn skilsButton">Skils</div>
+        <div class="nav-btn skilsButton">Skills</div>
     </div>
 </div>
 HTML;
 
 $navbar_rus = <<<HTML
 <div class="navbar" style="position: absolute;top: 0;">
-    <a class="logo"><img src="https://whaile.ru/img/_whaile_.png" width="40px" alt="_whaile_"></a>
-
-    <audio id="audio" controls style="display: none;">
-        <source src="m.mp3" type="audio/mpeg">
-    </audio>
-
-    <div class="audio-visualizer">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <div style="display: flex">
+        <a class="logo"><img src="https://whaile.ru/img/_whaile_.png" width="40px" alt="_whaile_"></a>
+    
+        <audio id="audio" controls style="display: none;">
+            <source src="m.mp3" type="audio/mpeg">
+        </audio>
+    
+        <div class="audio-visualizer">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </div>
 
     <div class="nav-buttons" id="navMenu">
@@ -234,6 +238,19 @@ HTML;
                             </a>
                         </div>
                     </div>
+					
+					<div class="card">
+                        <div class="head">Ney</div>
+                        <div class="desk">Site portfolio for ney</div>
+                        <div class="linear"></div>
+                        <div class="btn">
+                            <a href="https://whaile.ru/demo/ney/index.php" target="_blank" style="text-decoration: none;">
+                                <div class="bot">
+                                    <div class="text">Demo</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
                     <div class="card">
                         <div class="head">HDWkeys</div>
@@ -302,12 +319,12 @@ HTML;
 
         <div class="skilsp" style="display: none;width: 100vw;height: 100vh;">
 
-            <div class="wfon">SKILS</div>
+            <div class="wfon">SKILLS</div>
 
             <div class="worksc">
                 <div class="done">
                     <div class="card">
-                        <div class="head">Languages</div>
+                        <div class="head">Skills</div>
                         <div class="desk">
                             HTML<br>
                             CSS<br>
@@ -601,6 +618,19 @@ HTML;
                             </a>
                         </div>
                     </div>
+					
+					<div class="card">
+                        <div class="head">Ney</div>
+                        <div class="desk">Сайт портфолио для ney'а</div>
+                        <div class="linear"></div>
+                        <div class="btn">
+                            <a href="https://whaile.ru/demo/ney/index.php" target="_blank" style="text-decoration: none;">
+                                <div class="bot">
+                                    <div class="text">Демо</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
                     <div class="card">
                         <div class="head">HDWkeys</div>
@@ -674,7 +704,7 @@ HTML;
             <div class="worksc">
                 <div class="done">
                     <div class="card">
-                        <div class="head">Языки</div>
+                        <div class="head">Навыки</div>
                         <div class="desk">
                             HTML<br>
                             CSS<br>

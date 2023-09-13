@@ -1,19 +1,21 @@
 <?php
 $navbareng = <<<HTML
 <div class="navbar" style="position: absolute;top: 0;">
-    <a class="logo"><img src="https://whaile.ru/img/_whaile_.png" width="40px" alt="_whaile_"></a>
-
-    <audio id="audio" controls style="display: none;">
-        <source src="m.mp3" type="audio/mpeg">
-    </audio>
-
-    <div class="audio-visualizer">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <div style="display: flex">
+        <a class="logo"><img src="https://whaile.ru/img/_whaile_.png" width="40px" alt="_whaile_"></a>
+    
+        <audio id="audio" controls style="display: none;">
+            <source src="m.mp3" type="audio/mpeg">
+        </audio>
+    
+        <div class="audio-visualizer">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </div>
 
     <div class="nav-buttons" id="navMenu">
