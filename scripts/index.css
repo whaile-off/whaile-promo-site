@@ -73,7 +73,7 @@ body {
 
 .language-option label {
     display: inline-block;
-    padding: 0px 15px;
+    padding: 0 15px;
     line-height: 34px;
     border: 1px solid #999;
     border-right: none;
@@ -170,9 +170,8 @@ body {
 .audio-visualizer {
     display: flex;
     align-items: center;
-    position: absolute;
-    margin-left: 100px;
-    top: 45px;
+    margin-left: 20px;
+    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -203,8 +202,8 @@ body {
     width: 70vw;
     justify-content: space-between;
     padding: 30px 15vw;
-    position: absolute;
     animation: slideDown 1s ease-out forwards;
+    align-items: center;
 }
 
 .navbar .toggler{
@@ -236,6 +235,8 @@ body {
     font-weight: 700;
     font-size: 32px;
     padding: 0 0 0 30px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar .item{
@@ -255,10 +256,12 @@ body {
     text-decoration: none;
     font-size: 20px;
     width: 150px;
+    height: 35px;
 }
 
 .navbar .nav-buttons {
     display: flex;
+    align-items: center;
 }
 
 .navbar .item.selected{
@@ -435,7 +438,7 @@ body {
 .card .desk {
     margin: 11px;
     width: 180px;
-    height: 55%;
+    height: 52%;
     overflow: auto;
 }
 
@@ -481,8 +484,7 @@ body {
     font-size: 186px;
     font-weight: 900;
     word-wrap: break-word;
-    margin: 70px;
-    margin-left: 18vw;
+    margin: 70px 70px 70px 18vw;
 }
 
 .aboutp {
@@ -583,6 +585,7 @@ body {
     .navbar {
         width: 100vw;
         padding: 30px 0;
+        align-items: start;
     }
 
     .navbar .nav-buttons {
