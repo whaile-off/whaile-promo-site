@@ -237,6 +237,7 @@ body {
     padding: 0 0 0 30px;
     display: flex;
     align-items: center;
+    user-select: none;
 }
 
 .navbar .item{
@@ -309,6 +310,7 @@ body {
     width: 75px;
     height: 110px;
     margin: 8% 0;
+    user-select: none;
 }
 
 .arrow {
@@ -403,6 +405,7 @@ body {
 
 .I {
     margin: 0 7%;
+    user-select: none;
 }
 
 .done {
